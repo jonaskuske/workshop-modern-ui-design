@@ -3,7 +3,7 @@
 <br>
 <br>
 
-1. [Diesen Ordner herunterladen](http://api.dmp-bremerhaven.de/modernui/design-with-code.zip)
+1. [Diesen Ordner herunterladen](https://dmp.hs-bremerhaven.de/www/modern-ui/design-with-code.zip)
 2. [Node installieren](https://nodejs.org/de/)
 3. Ordner in präferiertem Editor (Empfehlung: [VS Code](https://code.visualstudio.com/)) öffnen
 4. Befehl `npm run serve` oder `npm run serve:styleguide` ausführen (in VS Code: `Terminal → Run Task...`)
