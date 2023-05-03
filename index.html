@@ -379,7 +379,7 @@
                 />
               </a>
               <p>
-                Jonas (22) ist DMP Student bei Tag und Web Developer bei Nacht. Wenn es um Websites
+                Jonas <span data-age-j>(22)</span> ist DMP Student bei Tag und Web Developer bei Nacht. Wenn es um Websites
                 und Apps geht, kennt er jeden neuen heißen Scheiß. Responsive Design, Accessibility
                 und Animationen sind seine großen Stärken im Bereich des Interface Designs. Privat
                 ist Jonas übrigens großer Fan von Fortbewegungsmitteln – egal ob Fahrräder, Züge,
@@ -399,13 +399,17 @@
                 />
               </a>
               <p>
-                Rieke, 22, ist auch DMP Studentin (Surprise!). Sie liebt die Arbeit mit Farben und
+                Rieke, <span data-age-r>22</span>, ist auch DMP Studentin (Surprise!). Sie liebt die Arbeit mit Farben und
                 Typografie und kennt gleichzeitig die Grundlagen der Webentwicklung. Sie freut sich
                 jedes Mal, wenn sie beim Web Design beides sinnvoll vereinen kann und so neues im
                 Bereich UI/UX entdeckt. Außerdem ist sie Fan von Dingen, die im All herumfliegen:
                 Planeten, Sterne, die ISS und Tesla.
               </p>
             </article>
+            <script type="module">
+              document.querySelector('[data-age-j]').textContent = parseInt((new Date().getTime() - new Date('1997-07-18')) / 1000 / 60 / 60 / 24 / 365, 10);
+              document.querySelector('[data-age-r]').textContent = parseInt((new Date().getTime() - new Date('1997-06-16')) / 1000 / 60 / 60 / 24 / 365, 10);
+            </script>
           </div>
         </div>
       </section>
