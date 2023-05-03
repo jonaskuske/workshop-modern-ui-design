@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="de" class="h-100 antialiased scrollbar-primary">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Ein 4-teiliger Workshop zum Thema Modern UI Design und UX Design. Ausgerichtet von Jonas Kuske und Rieke Helmers an der Hochschule Bremerhaven."
+    />
+    <title>Modern UI Design</title>
+    <link rel="canonical" href="https://modern-ui.design" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#a11cf2" />
+
+    <!-- [if IE]
+      <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+    <![endif]-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://modern-ui.design" />
+    <meta property="og:title" content="Modern UI Design Workshop" />
+    <meta
+      property="og:description"
+      content="Ein 4-teiliger Workshop zum Thema Modern UI Design und UX Design. Ausgerichtet von Jonas Kuske und Rieke Helmers an der Hochschule Bremerhaven."
+    />
+    <meta property="og:image" content="https://modern-ui.design/assets/images/snippet.png" />
+    <meta property="og:image:width" content="1900" />
+    <meta property="og:image:height" content="1089" />
+
+    <meta name="msapplication-TileColor" content="#a11cf2" />
+    <meta name="msapplication-config" content="./assets/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#a11cf2" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <link rel="stylesheet" href="./assets/styles.min.css" />
+    <script type="module">
+      import { detectScrollBar, polyfill } from './assets/js/utils.js'
+      detectScrollBar()
+      polyfill()
+    </script>
+    <script type="module" src="./assets/js/main.js"></script>
+  </head>
+
+  <body
+    class="flex flex-col items-start font-light text-white lg:text-black min-h-full bg-primary lg:bg-transparent"
+  >
+    <div class="container w-full max-w-4xl xl:max-w-6xl mx-auto">
+      <div class="w-16 js-line-1"></div>
+    </div>
+    <div
+      class="splash-header-container fixed top-0 left-0 w-full h-16 z-20 flex bg-primary lg:bg-gradient text-white shadow-xl"
+    >
+      <script>
+        if (!window.location.hash && !sessionStorage.getItem('splash_shown')) {
+          const container = document.querySelector('.splash-header-container')
+          container.classList.add('h-full')
+        }
+        sessionStorage.setItem('splash_shown', 1)
+      </script>
+      <header
+        class="header container visible flex items-center w-full max-w-4xl xl:max-w-6xl mx-auto"
+      >
+        <a
+          href="#start"
+          class="mr-auto outline-none p-1 border-t-2 border-b-2 border-transparent focus:border-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 547.95 350.29"
+            aria-labelledby="logoTitle"
+            class="w-12 h-12 lg:w-16 text-white"
+          >
+            <title id="logoTitle">Modern UI Design Logo</title>
+            <defs>
+              <style>
+                .line {
+                  fill: none;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 39.69px;
+                }
+              </style>
+            </defs>
+            <path
+              class="line stroke-current"
+              d="M19.84,283.07l0-262.4,120.5,176.26L263,19.84l0,211s0,99.61,96.92,99.61c98,0,98-99.61,98-99.61V60"
+            />
+            <path
+              class="fill-current"
+              d="M506.71,82.37q-5.41-4.53-5.4-14.46V61q0-10.37,5.83-14.68T525.06,42q12.09,0,17.49,4.54T548,61v6.92q0,10.35-5.61,14.68t-17.71,4.32Q512.11,86.91,506.71,82.37Z"
+            />
+          </svg>
+        </a>
+
+        <a href="#start" class="font-display font-medium ml-4">Start</a>
+        <a href="#termine" class="font-display font-medium ml-4">Termine</a>
+        <a href="#about" class="font-display font-medium ml-4">About</a>
+        <div class="btn-signup max-w-0">
+          <a
+            href="./handout"
+            class="m-1 ml-4 button text-white bg-black-30 focus:bg-black-50 hover:bg-black-50 outline-none focus:shadow-outline"
+          >
+            Handout
+          </a>
+        </div>
+      </header>
+
+      <div
+        class="splash absolute top-0 left-0 w-full h-full invisible opacity-0 flex flex-col items-center text-center"
+      >
+        <div class="my-auto">
+          <svg
+            class="inline mb-8 max-w-xs lg:max-w-sm invisible"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 687.69 454.8"
+            aria-hidden="true"
+          >
+            <defs>
+              <style>
+                .line {
+                  fill: none;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 39.69px;
+                }
+                .dot {
+                  transform-origin: 572.32px 120px;
+                }
+              </style>
+            </defs>
+            <path
+              class="line stroke-current"
+              d="M85.46,335.33l0-262.41L206,249.18,328.64,72.1l0,211s0,99.61,96.92,99.61c98,0,98-99.61,98-99.61V112.24"
+            />
+            <path
+              class="dot fill-current opacity-0"
+              d="M572.32,134.63q-5.4-4.55-5.39-14.47v-6.91q0-10.36,5.83-14.69t17.92-4.32q12.09,0,17.49,4.54t5.4,14.47v6.91q0,10.36-5.62,14.68t-17.7,4.32Q577.71,139.16,572.32,134.63Z"
+            />
+          </svg>
+
+          <h1 class="text-2xl lg:text-5xl opacity-0">Modern UI Design</h1>
+        </div>
+
+        <div class="inline-block w-12 h-12 rounded-full bg-white pulse mb-16" role="status">
+          <span class="sr-only">Wird geladen...</span>
+        </div>
+      </div>
+    </div>
+
+    <main class="w-full flex-grow flex flex-col items-center">
+      <section
+        id="start"
+        class="container min-h-screen mb-10 pt-16 flex flex-col justify-center items-center lg:pt-0 lg:flex-row lg:justify-start lg:mb-20 lg:-mt-10 lg:max-w-4xl xxl:max-w-6xl"
+      >
+        <img
+          class="w-full max-w-lg mt-6 mb-3 lg:w-1/2 lg:max-w-full lg:my-0 xxl:w-5/12"
+          src="./assets/images/drag.svg"
+          alt="Illustration, die eine Hand zeigt, die auf einem abstrakten Smartphone-Interface Karten durch die Gegend schiebt"
+        />
+        <div
+          class="w-full mt-3 mb-6 lg:my-0 lg:absolute top-0 h-full right-0 left-0 mx-auto max-w-4xl"
+        >
+          <div
+            class="lg:absolute top-1/2 lg:-translate-y-1/2 left-1/2 lg:mr-6 xxl:mr-0 lg:ml-20 lg:p-8 lg:-mt-6 lg:rounded-xl lg:shadow-md lg:bg-accent-gradient js-line-2"
+          >
+            <p class="mb-2">
+              Was ist UX/UI-Design? Wo liegt der Unterschied zwischen UX und UI? Warum brauchen wir
+              das? Wie gestaltet man gute Interfaces? Und vor allem:
+              <span class="font-medium">
+                wie wendet man das alles sinnvoll an?
+              </span>
+            </p>
+            <p class="mb-6">
+              Diese Fragen und mehr waren Thema unseres 4-teiligen Workshops zum Thema Modern UI
+              Design. Eine Zusammenfassung gibt es hier:
+            </p>
+            <div class="text-center">
+              <a
+                href="./handout"
+                class="js-observed-signup button text-white bg-black-30 focus:bg-black-50 hover:bg-black-50 outline-none focus:shadow-outline"
+              >
+                Handout
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="termine"
+        class="container pt-20 -mt-20 mb-16 max-w-4xl text-white lg:mb-40 lg:-mt-64 lg:pt-24 z-10"
+      >
+        <div class="w-full lg:rounded-xl lg:shadow-md lg:bg-primary-gradient lg:p-20 js-line-3">
+          <h2 class="mb-8 lg:mb-12">Termine</h2>
+
+          <ol class="m-0 p-0 lg:mx-10 mb-3">
+            <li>
+              <a
+                href="./flowing-through-the-process"
+                class="flex flex-wrap items-center leading-relaxed mb-8 md:mb-6 -m-2 md:flex-no-wrap lg:items-start hover:no-underline focus:no-underline transition-transform transition-0.1 transition-ease-in lg:hover:translate-x-4 lg:focus:translate-x-4 group"
+              >
+                <div class="flex-grow-full m-2">
+                  <h3 class="mb-0 group-focus:text-accent">
+                    1 – Flowing through the Process
+                    <span
+                      class="ml-4 text-2xl transition-opacity transition-0.1 transition-ease-in"
+                      aria-hidden="true"
+                      >›</span
+                    >
+                  </h3>
+                  <p>
+                    Was ist Interface Design eigentlich? Wie geht man beim Designprozess am besten
+                    vor... Und wie besser nicht?
+                  </p>
+                </div>
+                <time
+                  class="bg-white text-primary text-center rounded-full px-4 py-2 flex-shrink-0 flex-grow font-bold m-2 lg:ml-20 lg:bg-transparent lg:text-white lg:p-0 lg:rounded-none lg:text-right"
+                >
+                  28.10.2019<br class="hidden lg:inline" />
+                  <span class="font-light ml-2">
+                    10:30 - 15:30 Uhr
+                  </span>
+                </time>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./make-it-pretty-make-it-work"
+                class="flex flex-wrap items-center leading-relaxed mb-8 md:mb-6 -m-2 md:flex-no-wrap lg:items-start hover:no-underline focus:no-underline transition-transform transition-0.1 transition-ease-in lg:hover:translate-x-4 lg:focus:translate-x-4 group"
+              >
+                <div class="flex-grow-full m-2">
+                  <h3 class="mb-0 group-focus:text-accent">
+                    2 – Make it pretty, make it work
+                    <span
+                      class="ml-4 text-2xl transition-opacity transition-0.1 transition-ease-in"
+                      aria-hidden="true"
+                      >›</span
+                    >
+                  </h3>
+                  <p>
+                    Usability-Patterns, Farben, Typografie, Animationen – Design-Tipps und wichtiges
+                    Basiswissen
+                  </p>
+                </div>
+                <time
+                  class="bg-white text-primary text-center rounded-full px-4 py-2 flex-shrink-0 flex-grow font-bold m-2 lg:ml-20 lg:bg-transparent lg:text-white lg:p-0 lg:rounded-none lg:text-right"
+                >
+                  11.11.2019<br class="hidden lg:inline" />
+                  <span class="font-light ml-2">
+                    10:30 - 15:30 Uhr
+                  </span>
+                </time>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./design-for-everyone"
+                class="flex flex-wrap items-center leading-relaxed mb-8 md:mb-6 -m-2 md:flex-no-wrap lg:items-start hover:no-underline focus:no-underline transition-transform transition-0.1 transition-ease-in lg:hover:translate-x-4 lg:focus:translate-x-4 group"
+              >
+                <div class="flex-grow-full m-2">
+                  <h3 class="mb-0 group-focus:text-accent">
+                    3 – Design for Everyone
+                    <span
+                      class="ml-4 text-2xl transition-opacity transition-0.1 transition-ease-in"
+                      aria-hidden="true"
+                      >›</span
+                    >
+                  </h3>
+                  <p>
+                    Von Smartwatch bis TV und Tastatur bis Screenreader: Interfaces bauen, die in
+                    jeder Situation funktionieren
+                  </p>
+                </div>
+                <time
+                  class="bg-white text-primary text-center rounded-full px-4 py-2 flex-shrink-0 flex-grow font-bold m-2 lg:ml-20 lg:bg-transparent lg:text-white lg:p-0 lg:rounded-none lg:text-right"
+                >
+                  25.11.2019<br class="hidden lg:inline" />
+                  <span class="font-light ml-2">
+                    10:30 - 15:30 Uhr
+                  </span>
+                </time>
+              </a>
+            </li>
+            <li>
+              <a
+                href="./action"
+                class="flex flex-wrap items-center leading-relaxed mb-8 md:mb-6 -m-2 md:flex-no-wrap lg:items-start hover:no-underline focus:no-underline transition-transform transition-0.1 transition-ease-in lg:hover:translate-x-4 lg:focus:translate-x-4 group"
+              >
+                <div class="flex-grow-full m-2">
+                  <h3 class="mb-0 group-focus:text-accent">
+                    4 – Action!
+                    <span
+                      class="ml-4 text-2xl transition-opacity transition-0.1 transition-ease-in"
+                      aria-hidden="true"
+                      >›</span
+                    >
+                  </h3>
+                  <p>
+                    Das Gelernte bei einem größeren Projekt direkt ausprobieren. Apropos
+                    Großprojekt: was sind eigentlich Design Systems?
+                  </p>
+                </div>
+                <time
+                  class="bg-white text-primary text-center rounded-full px-4 py-2 flex-shrink-0 flex-grow font-bold m-2 lg:ml-20 lg:bg-transparent lg:text-white lg:p-0 lg:rounded-none lg:text-right"
+                >
+                  09.12.2019<br class="hidden lg:inline" />
+                  <span class="font-light ml-2">
+                    10:30 - 15:30 Uhr
+                  </span>
+                </time>
+              </a>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="about" class="container max-w-4xl pt-24 -mt-24 mb-16 flex flex-col lg:mb-40">
+        <div class="w-full lg:rounded-xl lg:shadow-md lg:bg-accent-gradient lg:p-20 js-line-4">
+          <h2 class="mb-8 lg:mb-12">About</h2>
+
+          <div class="lg:mx-10">
+            <p class="mb-6">
+              Mit unserem Workshop wollen wir euch einige Aspekte des modernen UI-Designs
+              näherbringen. Im Fokus steht dabei unser Leitspruch »Context is king«. Wir wollen
+              nicht nur theoretische Grundlagen bieten, sondern insbesondere zeigen, wie das Wissen
+              sinnvoll angewendet werden kann und wie wichtig UI Design eigentlich ist. Oh, und
+              natürlich ist das kein Frontalunterricht: wir wollen alles gemeinsam mit euch
+              erarbeiten.
+            </p>
+
+            <h3 class="mb-6">Was muss ich beachten?</h3>
+            <p class="mb-2">
+              <span class="font-bold">Hinweis:</span> der Workshop ist beendet; eine Teilnahme ist
+              nicht mehr möglich.
+            </p>
+            <p class="mb-6">
+              Der Workshop wird an 4 Terminen im Designlabor der Hochschule Bremerhaven stattfinden.
+              Es sind alle willkommen, allerdings gehen wir von Grundkenntnissen im Designbereich
+              aus – für Erstsemester ohne sonstige Vorerfahrung ist der Workshop also nur bedingt
+              geeignet. Mitzubringen ist nach Möglichkeit ein Laptop, Stift und Papier und natürlich
+              gute Laune. 🚀
+            </p>
+            <h3 class="mb-6">Fragen?</h3>
+            <p>
+              Dann schreib einfach an
+              <a
+                class="text-accent lg:text-primary font-bold"
+                href="mailto:workshop@modern-ui.design"
+              >
+                workshop@modern-ui.design</a
+              >!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="wir" class="w-full text-white pt-24 -mt-24 mb-16 lg:mb-40 z-10">
+        <div class="w-full bg-gradient shadow-inner py-16 lg:py-20">
+          <h3 class="text-center mb-8 lg:mb-12">Wer wir sind</h3>
+
+          <div class="container mx-auto flex flex-col lg:flex-row xl:max-w-6xl xxl:max-w-7xl">
+            <article class="flex flex-col lg:flex-row items-center mb-12 lg:mb-0 lg:mr-2 xl:mr-6">
+              <a
+                href="https://jonaskuske.com?lang=de&color=#13fed4"
+                class="mb-6 flex-shrink-0 rounded-full p-1 border-4 border-dotted border-transparent hover:border-accent focus:border-accent lg:mb-0 lg:mr-4"
+              >
+                <img
+                  class="w-48 h-48 rounded-full shadow-inner"
+                  src="./assets/images/jonas.jpg"
+                  alt=""
+                />
+              </a>
+              <p>
+                Jonas (22) ist DMP Student bei Tag und Web Developer bei Nacht. Wenn es um Websites
+                und Apps geht, kennt er jeden neuen heißen Scheiß. Responsive Design, Accessibility
+                und Animationen sind seine großen Stärken im Bereich des Interface Designs. Privat
+                ist Jonas übrigens großer Fan von Fortbewegungsmitteln – egal ob Fahrräder, Züge,
+                Flugzeuge oder Raketen...
+              </p>
+            </article>
+
+            <article class="flex flex-col lg:flex-row items-center lg:ml-2 xl:ml-6">
+              <a
+                href="https://riekehelmers.com"
+                class="mb-6 flex-shrink-0 rounded-full p-1 border-4 border-dotted border-transparent hover:border-accent focus:border-accent lg:mb-0 lg:mr-4"
+              >
+                <img
+                  class="w-48 h-48 rounded-full shadow-inner"
+                  src="./assets/images/rieke.jpg"
+                  alt=""
+                />
+              </a>
+              <p>
+                Rieke, 22, ist auch DMP Studentin (Surprise!). Sie liebt die Arbeit mit Farben und
+                Typografie und kennt gleichzeitig die Grundlagen der Webentwicklung. Sie freut sich
+                jedes Mal, wenn sie beim Web Design beides sinnvoll vereinen kann und so neues im
+                Bereich UI/UX entdeckt. Außerdem ist sie Fan von Dingen, die im All herumfliegen:
+                Planeten, Sterne, die ISS und Tesla.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="anmelden"
+        class="container max-w-4xl pt-20 -mt-20 mb-32 flex text-white lg:min-h-160 lg:mb-40"
+      >
+        <div
+          class="w-full flex-grow lg:rounded-xl lg:shadow-md lg:bg-primary-gradient-opaque flex flex-col lg:p-20 relative"
+        >
+          <div class="absolute top-24 left-0 js-line-5" aria-hidden="true"></div>
+          <div class="lg:mx-10">
+            <h2 class="mb-8 lg:mb-12">Danke für eure Teilnahme!</h2>
+
+            <div
+              class="bg-white rounded-lg text-black flex flex-col mb-10 p-4"
+              style="min-height: 220px;"
+            >
+              <blockquote class="p-6 px-10 relative my-auto self-center">
+                <span
+                  class="absolute bottom-0 left-0 text-6xl text-accent font-bold leading-none p-2"
+                >
+                  „
+                </span>
+                <span class="js-feedback-output">
+                  Danke für eure Unterstützung, fühl mich jetzt wesentlich besser vorbereitet für
+                  alles, was kommt. :)
+                </span>
+                <span
+                  class="absolute top-8 -translate-y-1/2 right-0 text-6xl text-accent font-bold leading-none p-2"
+                >
+                  ”
+                </span>
+              </blockquote>
+              <div class="flex justify-between">
+                <button
+                  aria-label="Vorheriges Feedback"
+                  title="Vorheriges Feedback"
+                  class="js-feedback-prev border-b-4 border-transparent hover:border-accent focus:border-accent focus:outline-none font-sans"
+                >
+                  ◀
+                </button>
+                <button
+                  aria-label="Nächstes Feedback"
+                  title="Nächstes Feedback"
+                  class="js-feedback-next border-b-4 border-transparent hover:border-accent focus:border-accent focus:outline-none font-sans"
+                >
+                  ▶
+                </button>
+              </div>
+            </div>
+
+            <script>
+              const messages = [
+                'Danke für eure Unterstützung, fühl mich jetzt wesentlich besser vorbereitet für alles, was kommt. :)',
+                'Toller Workshop! Ich habe wirklich viel gelernt und gerade die praktischen Arbeiten haben viel Spaß gemacht!',
+                'Würde mich über weitere Veranstaltungen dieser Art freuen.',
+                'War ne tolle Erfahrung, gerne wieder :-)',
+                'Die Übungen haben echt viel Spaß gemacht und waren lehrreich.',
+                'War supi, vielen Dank!',
+                'Es wird alles sehr gut erklärt und auf Fragen eingegangen. Atmosspähre ist auch super :-)',
+                'Top, vielen Dank euch gerne nochmal',
+                'Praktische Arbeit, gute Stimmung, support ist immer da! Snacks waren super, danke!',
+                'Theorie und Praxis haben super ineinander gegriffen, auf Fragen wurde immer sofort eingegangen',
+                'War alles super!',
+              ]
+              const first = 0
+              const last = messages.length - 1
+
+              const output = document.querySelector('.js-feedback-output')
+              const btnPrev = document.querySelector('.js-feedback-prev')
+              const btnNext = document.querySelector('.js-feedback-next')
+
+              let current = 0
+              let timeoutId = null
+
+              const next = () => {
+                if (++current > last) current = first
+                output.textContent = messages[current]
+                clearTimeout(timeoutId)
+                timeoutId = setTimeout(next, 4000)
+              }
+              const prev = () => {
+                if (--current < first) current = last
+                output.textContent = messages[current]
+                clearTimeout(timeoutId)
+                timeoutId = setTimeout(next, 4000)
+              }
+
+              btnPrev.addEventListener('click', prev)
+              btnNext.addEventListener('click', next)
+              next()
+            </script>
+
+            <p>
+              Wir hatten sehr viel Spaß – danke für die tolle Atmosphäre und die gute Mitarbeit!
+              <span class="font-sans">❤</span>
+            </p>
+            <p class="text-right text-accent mb-2 font-display font-bold">
+              — <a href="https://jonaskuske.com">Jonas</a> &
+              <a href="https://riekehelmers.com">Rieke</a>
+            </p>
+
+            <img
+              class="-mb-12 ml-auto max-w-full lg:max-w-96"
+              src="./assets/images/undraw_having_fun_iais.svg"
+              alt="Ein trauriges Roboterwesen vor einem dunklen, abgeschalteten Server."
+            />
+          </div>
+          <div class="lg:mx-10 js-signup-form hidden">
+            <h2 class="mb-8 lg:mb-12">Anmeldung</h2>
+            <p class="mb-2">
+              Sichere dir jetzt deinen Platz für den Workshop!<br />
+              Damit wir planen können, benötigen wir eine verbindliche Anmeldung.
+            </p>
+
+            <div class="relative w-full flex-grow flex flex-col lg:flex-row">
+              <form
+                action="https://dmp.hs-bremerhaven.de/www/modern-ui/signup.php"
+                method="POST"
+                class="w-56 lg:w-auto"
+              >
+                <div class="field mb-1">
+                  <input
+                    type="text"
+                    required
+                    placeholder=" "
+                    autocomplete="name"
+                    id="name"
+                    name="name"
+                    class="text-white bg-black-30 focus:bg-white-30"
+                  />
+                  <label for="name">Name</label>
+                </div>
+                <div class="field mb-1">
+                  <input
+                    type="number"
+                    required
+                    placeholder=" "
+                    id="semester"
+                    name="semester"
+                    class="text-white bg-black-30 focus:bg-white-30"
+                  />
+                  <label for="semester">Semester</label>
+                </div>
+                <div class="field mb-6">
+                  <input
+                    type="email"
+                    placeholder=" "
+                    required
+                    autocomplete="email"
+                    id="email"
+                    name="email"
+                    class="text-white bg-black-30 focus:bg-white-30"
+                  />
+                  <label for="email">Mail</label>
+                </div>
+                <button
+                  class="button text-white bg-black-30 focus:outline-none hover:bg-white-30 focus:bg-white-30"
+                  type="submit"
+                >
+                  Absenden
+                </button>
+              </form>
+
+              <div class="w-full pb-32 lg:flex-grow lg:relative">
+                <img
+                  src="./assets/images/anmeldung.svg"
+                  alt=""
+                  class="absolute w-4/6 max-w-sm right-0 -bottom-1/10 lg:w-auto lg:max-w-full lg:-top-8 lg:right-auto lg:bottom-auto lg:left-20"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="lg:mx-10 hidden js-signup-success">
+            <h2 class="mb-8 lg:mb-12">Deine Anmeldung war erfolgreich!</h2>
+            <p class="mb-3 leading-relaxed">
+              Du erhältst in Kürze ein Bestätigungs-Email.<br />
+              Wir freuen uns auf dich! 🚀
+            </p>
+            <a
+              href="./?%E2%8F%AC#anmelden"
+              class="font-medium underline hover:text-accent focus:text-accent"
+            >
+              Neue Anmeldung
+            </a>
+            <img
+              class="-mb-12 mt-12 ml-auto max-w-lg"
+              src="./assets/images/online_party.svg"
+              alt="Illustration einer fröhlichen tanzenden Frau in Party-Stimmung"
+            />
+          </div>
+          <div class="lg:mx-10 js-signup-error hidden">
+            <h2 class="mb-8 lg:mb-12">Die Anmeldung ist leider fehlgeschlagen.</h2>
+            <p class="mb-3 leading-relaxed">
+              Bitte überprüfe deine Eingaben oder versuche es später nochmal.<br />
+              Du kannst uns auch einfach
+              <a href="#about" class="text-accent">direkt anschreiben</a>! 🤞🏻
+            </p>
+            <a
+              href="./?⏬#anmelden"
+              class="font-medium underline hover:text-accent focus:text-accent"
+            >
+              Erneut versuchen
+            </a>
+            <img
+              class="-mb-12 mt-12 ml-auto max-w-full lg:max-w-96"
+              src="./assets/images/server_down.svg"
+              alt="Ein trauriges Roboterwesen vor einem dunklen, abgeschalteten Server."
+            />
+          </div>
+          <script type="module">
+            import { $ } from './assets/js/utils.js'
+
+            const isSuccess = /☑|%E2%98%91/.test(window.location.search)
+            const isError = /❌|%E2%9D%8C/.test(window.location.search)
+            const skip = /⏬|%E2%8F%AC/.test(window.location.search) || isSuccess || isError
+
+            if (isSuccess) {
+              $('.js-signup-form').classList.add('hidden')
+              $('.js-signup-success').classList.remove('hidden')
+            } else if (isError) {
+              $('.js-signup-form').classList.add('hidden')
+              $('.js-signup-error').classList.remove('hidden')
+            }
+
+            const enableSmoothscroll = () => $('html').classList.add('smoothscroll')
+
+            if (skip) setTimeout(enableSmoothscroll, 2000)
+            else enableSmoothscroll()
+          </script>
+        </div>
+      </section>
+
+      <footer
+        class="container pb-4 flex items-center text-accent max-w-4xl xl:max-w-6xl mx-auto font-normal lg:hover:text-primary lg:focus-within:text-primary"
+      >
+        <a
+          class="mr-auto mb-0 outline-none border-t-2 border-b-2 border-transparent focus:border-accent"
+          href="https://dmp-bremerhaven.de"
+          rel="noopener noreferer"
+          aria-label="DMP Website"
+        >
+          <svg
+            aria-hidden="true"
+            width="80"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 841.89 595.28"
+            preserveAspectRatio="xMidYMid meet"
+            class="fill-current"
+          >
+            <path d="M354.43,383.93h-39.6V215.64h39.6V383.93Z" />
+            <rect x="401.94" y="215.64" width="39.6" height="168.29" />
+            <rect x="489.06" y="215.78" width="39.6" height="168.29" />
+            <path
+              d="M227.71,81V235.13c-15.37-13.28-35.34-23.24-57.24-23.24a87.7,87.7,0,0,0,0,175.39c21.9,0,42.08-10.08,57.45-23.36l-.21,20h39.6V81ZM170.47,351.55a52,52,0,1,1,0-103.93c34.32,0,55.82,23.27,55.82,52S204.54,351.55,170.47,351.55Z"
+            />
+            <path
+              d="M615.77,514.27V364.39c15.37,13.27,35.35,23.23,57.25,23.23,48.43,0,86.09-39.26,86.09-87.69S721.45,212.24,673,212.24c-21.9,0-42.08,10.08-57.45,23.35l.2-20H576.18V514.27ZM673,248c28.7,0,50.62,20.27,50.62,52,0,28.7-21.92,52-50.62,52-32.72,0-56-23.26-56-52S638.64,248,673,248Z"
+            />
+          </svg>
+        </a>
+
+        <a href="./impressum" class="mr-2 hover:underline outline-none focus:underline">
+          Impressum
+        </a>
+        <span class="pb-1">•</span>
+        <a href="./datenschutz" class="ml-2 hover:underline outline-none focus:underline">
+          Datenschutz
+        </a>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+@tailwind base;
+
+*,
+::before,
+::after {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  scrollbar-color: theme('colors.primary.default') theme('colors.accent.50');
+  scrollbar-width: thin;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body {
+  @apply font-body font-light leading-normal;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display font-bold;
+}
+h1 {
+  @apply text-3xl;
+}
+h2 {
+  @apply text-2xl;
+}
+h3 {
+  @apply text-lg;
+}
+
+a:hover,
+a:focus {
+  @apply underline outline-none;
+}
+
+/* Selection styles */
+::selection,
+.bg-primary::selection,
+.bg-primary ::selection,
+.bg-primary-gradient::selection,
+.bg-primary-gradient ::selection {
+  @apply bg-accent;
+}
+
+.bg-white::selection,
+.bg-white ::selection,
+.bg-accent::selection,
+.bg-accent ::selection,
+.bg-accent-gradient::selection,
+.bg-accent-gradient ::selection {
+  @apply bg-primary text-white;
+}
+
+@screen lg {
+  .lg\:bg-primary::selection,
+  .lg\:bg-primary ::selection,
+  .lg\:bg-primary-gradient::selection,
+  .lg\:bg-primary-gradient ::selection {
+    @apply bg-accent;
+  }
+
+  .lg\:bg-white::selection,
+  .lg\:bg-white ::selection,
+  .lg\:bg-accent::selection,
+  .lg\:bg-accent ::selection,
+  .lg\:bg-accent-gradient::selection,
+  .lg\:bg-accent-gradient ::selection {
+    @apply bg-primary text-white;
+  }
+}
+
+/* Scrollbar styles */
+.scrollbar ::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar {
+  @apply w-2;
+}
+.scrollbar ::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded;
+}
+
+.scrollbar.scrollbar-primary ::-webkit-scrollbar,
+.scrollbar.scrollbar-primary::-webkit-scrollbar {
+  @apply bg-accent;
+}
+.scrollbar.scrollbar-primary ::-webkit-scrollbar-thumb,
+.scrollbar.scrollbar-primary::-webkit-scrollbar-thumb {
+  @apply bg-primary-90;
+}
+.scrollbar.scrollbar-primary ::-webkit-scrollbar-thumb:hover,
+.scrollbar.scrollbar-primary::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
+.scrollbar.scrollbar-accent ::-webkit-scrollbar,
+.scrollbar.scrollbar-accent::-webkit-scrollbar {
+  @apply bg-primary;
+}
+.scrollbar.scrollbar-accent ::-webkit-scrollbar-thumb,
+.scrollbar.scrollbar-accent::-webkit-scrollbar-thumb {
+  @apply bg-accent-90;
+}
+.scrollbar.scrollbar-accent ::-webkit-scrollbar-thumb:hover,
+.scrollbar.scrollbar-accent::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent;
+}

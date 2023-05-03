@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full scrollbar-accent smoothscroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Zusammenfassung der wichtigsten Inhalte des Workshops zum Thema Modern UI Design und UX Design von Jonas Kuske und Rieke Helmers an der HS Bremerhaven."
+    />
+    <title>Handout | Modern UI Design</title>
+    <link rel="canonical" href="https://modern-ui.design/handout" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#a11cf2" />
+
+    <!-- [if IE]
+      <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+    <![endif]-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://modern-ui.design/handout" />
+    <meta property="og:title" content="Handout | Modern UI Design Workshop" />
+    <meta
+      property="og:description"
+      content="Zusammenfassung der wichtigsten Inhalte des Workshops zum Thema Modern UI Design und UX Design von Jonas Kuske und Rieke Helmers an der HS Bremerhaven."
+    />
+    <meta property="og:image" content="https://modern-ui.design/assets/images/snippet.png" />
+    <meta property="og:image:width" content="1900" />
+    <meta property="og:image:height" content="1089" />
+
+    <meta name="msapplication-TileColor" content="#a11cf2" />
+    <meta name="msapplication-config" content="./assets/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#a11cf2" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+    <link rel="stylesheet" href="./assets/styles.min.css" />
+    <link rel="stylesheet" href="./styles/print.css" media="print" />
+    <script type="module">
+      import { detectScrollBar, polyfill } from './assets/js/utils.js'
+      detectScrollBar()
+      polyfill()
+    </script>
+  </head>
+
+  <body class="flex flex-col items-start font-light bg-primary text-white min-h-full print:block">
+    <div
+      class="splash-header-container fixed top-0 left-0 w-full h-16 z-20 flex bg-primary lg:bg-gradient text-white shadow-xl print:hidden"
+    >
+      <header
+        class="header container visible flex items-center w-full max-w-4xl xl:max-w-6xl mx-auto"
+      >
+        <a
+          href="./#start"
+          class="mr-auto outline-none p-1 border-t-2 border-b-2 border-transparent focus:border-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 547.95 350.29"
+            aria-labelledby="logoTitle"
+            class="w-12 h-12 lg:w-16 text-white"
+          >
+            <title id="logoTitle">Modern UI Design Logo</title>
+            <defs>
+              <style>
+                .line {
+                  fill: none;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 39.69px;
+                }
+              </style>
+            </defs>
+            <path
+              class="line stroke-current"
+              d="M19.84,283.07l0-262.4,120.5,176.26L263,19.84l0,211s0,99.61,96.92,99.61c98,0,98-99.61,98-99.61V60"
+            />
+            <path
+              class="fill-current"
+              d="M506.71,82.37q-5.41-4.53-5.4-14.46V61q0-10.37,5.83-14.68T525.06,42q12.09,0,17.49,4.54T548,61v6.92q0,10.35-5.61,14.68t-17.71,4.32Q512.11,86.91,506.71,82.37Z"
+            />
+          </svg>
+        </a>
+
+        <a href="./#start" class="font-display font-medium ml-4">Start</a>
+        <a href="./#termine" class="font-display font-medium ml-4">Termine</a>
+        <a href="./#about" class="font-display font-medium ml-4">About</a>
+        <div class="btn-signup max-w-0 lg:max-w-full">
+          <a
+            href="./handout"
+            class="ml-4 button text-white bg-black-30 focus:bg-white-30 outline-none focus:text-black-70"
+          >
+            Handout
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <aside class="hidden xxxl:block fixed top-0 left-0 h-full print:hidden">
+      <nav class="mt-64 ml-4">
+        <ul>
+          <li class="mb-2">
+            <a
+              href="#was-ist-ui-ux-design"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Was ist UI/UX-Design?
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="#tools-methodik"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Tools & Methodik
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="#look-feel"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Look & Feel
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="#animationen-uebergaenge"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Animationen & Übergänge
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="#accessibility"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Accessibility
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="#responsive-design"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Responsive Design
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="#quellen"
+              class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+            >
+              Quellen
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="container max-w-4xl xl:max-w-6xl mx-auto pt-20 mb-16 leading-relaxed print:pt-0">
+      <header class="hidden print:block text-center text-3xl font-bold font-display mt-6 mb-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 547.95 350.29"
+          aria-labelledby="logoTitle"
+          class="w-12 h-12 lg:w-16 text-white inline-block mb-2"
+        >
+          <title id="logoTitle">Modern UI Design Logo</title>
+          <defs>
+            <style>
+              .line {
+                fill: none;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 39.69px;
+              }
+            </style>
+          </defs>
+          <path
+            class="line stroke-current"
+            d="M19.84,283.07l0-262.4,120.5,176.26L263,19.84l0,211s0,99.61,96.92,99.61c98,0,98-99.61,98-99.61V60"
+          />
+          <path
+            class="fill-current"
+            d="M506.71,82.37q-5.41-4.53-5.4-14.46V61q0-10.37,5.83-14.68T525.06,42q12.09,0,17.49,4.54T548,61v6.92q0,10.35-5.61,14.68t-17.71,4.32Q512.11,86.91,506.71,82.37Z"
+          />
+        </svg>
+        <p>Modern UI Design – Handout</p>
+      </header>
+
+      <h1 class="sr-only">Handout</h1>
+
+      <div class="mb-2 md:mb-0 md:flex relative print:hidden">
+        <div
+          class="flex justify-between md:absolute right-0 top-0 md:inline-flex md:flex-col bg-accent rounded-lg shadow py-2 px-6"
+        >
+          <a
+            class="font-bold flex items-center md:flex-row-reverse mr-2 md:mr-0 md:mb-1 hocus:text-primary"
+            href="https://dmp.hs-bremerhaven.de/www/modern-ui/Handout.pdf"
+          >
+            <!-- prettier-ignore -->
+            <svg aria-hidden="true" class="inline fill-current w-5 mr-1 md:mr-0 md:ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><path d="M81.6 6h-33v29a1 1 0 01-1 1h-29v18h63zM18.6 88.6h63v7.5h-63z"/><path d="M46.6 7.4L33.3 20.7 20 34.1h26.6V7.4zM85.6 56H14.4a3.4 3.4 0 00-3.4 3.4v23.8a3.4 3.4 0 003.4 3.4h71.2a3.4 3.4 0 003.4-3.4V59.4a3.4 3.4 0 00-3.4-3.4zM35.5 74h-2.9v6a1 1 0 01-1 1h-2.2a1 1 0 01-1-1V62.6a1 1 0 011-1h6c4.4 0 6.8 2.2 6.8 6.2S39.8 74 35.4 74zm14.8 7h-5.8a1 1 0 01-1-1V62.6a1 1 0 011-1h5.8c6.2 0 9.7 3.5 9.7 9.7S56.6 81 50.3 81zm24-16.4a1 1 0 01-1 1H66v4h6.2a1 1 0 011 1v2a1 1 0 01-1 1H66V80a1 1 0 01-1 1h-2.2a1 1 0 01-1-1V62.6a1 1 0 011-1h10.5a1 1 0 011 1z"/><path d="M55.7 71.3c0-2-.5-3.5-1.4-4.4a5.4 5.4 0 00-4-1.3h-2.5V77h2.5c3.8 0 5.4-1.8 5.4-5.8zM37.9 67.8c0-1.6-.7-2.2-2.4-2.2h-2.9V70h2.9c2 0 2.4-.9 2.4-2.2z"/></g></svg>
+            <span>PDF<span class="hidden xs:inline whitespace-pre"> anzeigen</span></span>
+          </a>
+
+          <button
+            class="font-bold flex items-center md:flex-row-reverse ml-2 md:ml-0 hocus:underline hocus:text-primary focus:outline-none"
+            onclick="window.print()"
+          >
+            <!-- prettier-ignore -->
+            <svg aria-hidden="true" class="inline fill-current w-5 mr-1 md:mr-0 md:ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M37.9 72.4h24.2c1.9 0 3.4-1.5 3.4-3.4s-1.5-3.4-3.4-3.4H37.9c-1.9 0-3.4 1.5-3.4 3.4s1.5 3.4 3.4 3.4zM65.5 78.1h-31a3.4 3.4 0 00-3.4 3.4c0 1.9 1.5 3.4 3.4 3.4h31.1c1.9 0 3.4-1.5 3.4-3.4a3.6 3.6 0 00-3.5-3.4z"/><path d="M87.8 28H76.1V16.5c0-.9-.4-1.7-1-2.4L64.5 3.5c-.6-.6-1.5-1-2.4-1H27.3a3.4 3.4 0 00-3.4 3.4V28H12.2a8.6 8.6 0 00-8.6 8.6v28.6c0 4.8 3.9 8.6 8.6 8.6h6.2l-6 19.3c-.3 1-.1 2.2.5 3 .6.9 1.7 1.4 2.7 1.4h68.8c1.1 0 2.1-.5 2.7-1.4s.8-2 .5-3l-6-19.3h6.2c4.8 0 8.6-3.9 8.6-8.6V36.6a8.5 8.5 0 00-8.6-8.6zM30.7 9.3h27.4V17c0 1.9 1.5 3.4 3.4 3.4h7.8V28H30.7V9.3zM14.4 43c0-1.9 1.5-3.4 3.4-3.4h6.6c1.8 0 3.4 1.5 3.4 3.4s-1.6 3.4-3.4 3.4h-6.6a3.4 3.4 0 01-3.4-3.4zm5.8 47.7l9.6-30.9h40.3l9.6 30.9H20.2z"/></svg>
+            Drucken
+          </button>
+        </div>
+      </div>
+
+      <main>
+        <section class="mb-10 md:mt-12 print:mt-0 print:mb-6">
+          <h2 class="mb-4 text-center" id="was-ist-ui-ux-design">Was ist UI/UX-Design?</h2>
+
+          <blockquote class="mb-6 text-center max-w-3xl mx-auto">
+            »UX design refers to user experience design, while UI design stands for user interface
+            design. Both of these are crucial to an IT product and need to work closely together.
+            Despite being very integral to each other, the roles themselves are quite different,
+            involving distinct processes.«
+            <footer>
+              –
+              <cite>
+                <a href="https://hackernoon.com/what-is-ui-ux-design-1f01e9dbbf02">
+                  Hackernoon.com
+                </a>
+              </cite>
+            </footer>
+          </blockquote>
+
+          <div
+            class="card flex items-center justify-between p-4 px-6 mb-6 text-center max-w-lg mx-auto"
+          >
+            <p>
+              <span class="font-bold">UX<span class="hidden xs:inline">-Design</span></span>
+              <br />
+              <span class="text-xs xs:text-base">Funktionalität</span>
+            </p>
+            <img
+              width="100"
+              class="w-16 xs:w-24"
+              src="./assets/images/Link.png"
+              alt="Link aus Zelda, symbolisiert dass UX und UI miteinander verknüpft sind"
+            />
+            <p>
+              <span class="font-bold">UI<span class="hidden xs:inline">-Design</span></span>
+              <br />
+              <span class="text-xs xs:text-base">Gestaltung</span>
+            </p>
+          </div>
+
+          <h3 class="mb-2 text-center">Unterschied zu Print-Design</h3>
+          <p class="text-center mx-auto max-w-md mb-2">
+            Interfacedesign ist dynamisch & interaktiv – das gleiche Element kann je nach Gerät,
+            Systemeinstellungen, Zustand oder Interaktion ganz anders aussehen! Zum Beispiel:
+          </p>
+          <ul class="text-center">
+            <li>Smartphone ↔ Computer</li>
+            <li>Dark Mode ↔ Light Mode</li>
+            <li>Gedrückt ↔ Nicht gedrückt</li>
+            <li class="italic">loading, error, success</li>
+          </ul>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-center mb-8 print:mb-4" id="tools-methodik">Tools & Methodik</h2>
+
+          <div class="flex flex-col sm:flex-row justify-between max-w-3xl mx-auto mb-8">
+            <ul aria-label="Tools">
+              <li class="card flex mb-4 p-2 pr-8 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/figma.jpg" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">Figma</p>
+                  <a class="stretched-link" href="https://www.figma.com">figma.com</a>
+                </div>
+              </li>
+              <li class="card flex mb-4 p-2 pr-8 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/adobe-xd-logo.png" alt="" />
+                <div class="flex flex-col justify-between overflow-hidden">
+                  <p class="text-xl font-bold leading-normal">Adobe XD</p>
+                  <a
+                    class="stretched-link truncate"
+                    href="https://www.adobe.com/de/products/xd.html"
+                  >
+                    adobe.com/de/products/xd.html
+                  </a>
+                </div>
+              </li>
+              <li class="card flex mb-4 p-2 pr-8 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/sketch-symbol.svg" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">Sketch</p>
+                  <a class="stretched-link" href="https://www.sketch.com">sketch.com</a>
+                </div>
+              </li>
+            </ul>
+            <ul aria-label="Design-Ressourcen">
+              <li class="card flex mb-4 p-2 pr-8 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/pexels_logo.svg" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">Fotos: Pexels</p>
+                  <a class="stretched-link" href="https://pexels.com">pexels.com</a>
+                </div>
+              </li>
+              <li class="card flex mb-4 p-2 pr-8 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/Noun_Project_logo.svg" alt="" />
+                <div class="flex flex-col justify-between overflow-hidden">
+                  <p class="text-xl font-bold leading-normal truncate">Icons: Noun Project</p>
+                  <a class="stretched-link" href="https://thenounproject.com">thenounproject.com</a>
+                </div>
+              </li>
+              <li class="card flex mb-4 p-2 pr-8 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/undraw_logo_small.png" alt="" />
+                <div class="flex flex-col justify-between overflow-hidden">
+                  <p class="text-xl font-bold leading-normal truncate">Illustrationen: unDraw</p>
+                  <a class="stretched-link" href="https://undraw.co">undraw.co</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between w-full max-w-3xl mx-auto mb-8">
+            <div class="mb-4 sm:mb-0">
+              <p class="font-bold">Konzeptionsphase</p>
+              <ol class="list-decimal list-inside">
+                <li>Ideenfindung / Sinn & Zweck</li>
+                <li>Zielgruppenanalyse</li>
+                <li>Wireframing der wichtigsten Features</li>
+                <li>Erste Tests</li>
+                <li>Optimierung</li>
+              </ol>
+              <p class="italic">Schritt 3-5 wiederholen bis jedes Feature steht.</p>
+            </div>
+            <div class="flex flex-col">
+              <p class="font-bold">Designphase</p>
+              <p class="my-auto">...</p>
+              <ol class="list-decimal list-inside">
+                <li>Assets festlegen</li>
+                <li>High-Fidelity Prototyp</li>
+                <li>Assets verfeinern</li>
+                <li>Tests</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between text-center font-bold">
+            <figure class="card sm:flex-1 p-4 flex flex-col items-center">
+              <img
+                src="./assets/images/wireframe.jpg"
+                alt="Ein digital aber von Hand gezeichneter Screen, der sehr grob die Umrisse einer Uni-App zeigt. Im Menü gibt es Optionen wie 'Noten' oder 'Bibliothek', in der Navigationsleiste unten z.B. Symbole für Mensa und Nachrichten."
+                style="max-height: 400px;"
+                class="mb-2"
+              />
+              <figcaption class="mt-auto">Wireframe</figcaption>
+            </figure>
+
+            <p class="self-center mx-4 text-3xl">
+              <span class="sm:hidden">↓</span>
+              <span class="hidden sm:inline">→</span>
+            </p>
+
+            <figure class="card sm:flex-1 p-4 flex flex-col items-center">
+              <img
+                src="./assets/images/paper-prototype.jpg"
+                alt="Ein auf Papier gezeichnetes Interface einer Preisvergleichs-App."
+                style="max-height: 400px;"
+                class="mb-2"
+              />
+              <figcaption class="mt-auto">Paper Prototype</figcaption>
+            </figure>
+
+            <p class="self-center mx-4 text-3xl">
+              <span class="sm:hidden">↓</span>
+              <span class="hidden sm:inline">→</span>
+            </p>
+
+            <figure class="card sm:flex-1 p-4 flex flex-col items-center">
+              <img
+                src="./assets/images/high-fidelity.jpg"
+                alt="Ein per mit einem Designwerkzeug erstelltes App-Design für eine Pflanzen-App, die den Nutzer ans Gießen erinnert. Das Design ist 'High-Fidelity', sieht also schon 1 zu 1 aus wie eine fertig programmierte App."
+                style="max-height: 400px;"
+                class="mb-2"
+              />
+              <figcaption class="mt-auto">High-Fidelity</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-center mb-8" id="look-feel">Look & Feel</h2>
+
+          <div class="flex flex-col sm:flex-row justify-between max-w-3xl mx-auto mb-8">
+            <div class="flex-1 mb-4 sm:mb-0 sm:mr-2">
+              <p><span class="font-bold">Farbe</span> sollte...</p>
+              <ul>
+                <li>...zum Inhalt passen und die Marke repräsentieren</li>
+                <li>...genug Kontrast haben, sodass alles erkennbar und lesbar ist</li>
+                <li>...einheitliche Statusfarben für z.B. Fehler & Warnungen enthalten</li>
+                <li>...gut aussehen!</li>
+              </ul>
+            </div>
+            <div class="flex-1 sm:ml-2">
+              <p><span class="font-bold">Typografie</span> sollte...</p>
+              <ul>
+                <li>
+                  ...nicht zu stark gemixt werden! Maximal zwei Schriftarten auf einer Seite, oft
+                  reicht eine.
+                </li>
+                <li>
+                  ...kontrastreich sein. Schriftschnitte helfen bei Hierarchien, dürfen aber nicht
+                  zu ähnlich sein.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card p-4 flex flex-col sm:flex-row items-center max-w-lg mx-auto mb-8">
+            <p class="font-semibold text-center sm:text-right mb-4 sm:mb-0 sm:mr-4">
+              Styleguides helfen bei der Erstellung von einheitlichen Designs. So werden im
+              Vorhinein Regeln aufgestellt, die das spätere Ändern von Farben o. Ä. vereinfachen.
+            </p>
+            <img
+              class="w-full min-w-0 shadow"
+              src="./assets/images/styleguide.jpg"
+              alt="Styleguide der Modern UI Website, der die festgelegten Farben, Schriften und Elemente wie Eingabefelder, Logo und Menü zeigt"
+            />
+          </div>
+
+          <p class="max-w-3xl mx-auto mb-4 sm:text-center">
+            Farbe, Typografie und Weißraum helfen sehr stark dabei, enge, überfüllte Layouts besser
+            zu strukturieren. Durch den bewussten Einsatz von Farbe an den richtigen Stellen, durch
+            die Verwendung verschiedener Schriftgrößen und Schriftschnitte und durch das Hinzufügen
+            von Weißraum kann Hierarchie natürlich dargestellt und das Layout angenehmer und
+            übersichtlicher gestaltet werden:
+          </p>
+
+          <div class="card p-4 text-center mb-10 max-w-lg mx-auto">
+            <img
+              class="w-full shadow"
+              src="./assets/images/hierarchie_bad.jpg"
+              alt="Screenshot einer sehr unübersichtlichen Website, die Finanzdaten zeigt"
+            />
+            <p class="my-1 text-2xl">↓</p>
+            <img
+              class="w-full shadow"
+              src="./assets/images/hierarchie_good.jpg"
+              alt="Die gleiche Website, die Finanzdaten zeigt, nun dank verschiedenen Hintergrundfarben, Schriftschnitten und mehr Weißraum aber deutlich übersichtlicher"
+            />
+          </div>
+
+          <h3 class="mb-4 text-center" style="page-break-before: always;">
+            Beispiele für Gestaltungsmöglichkeiten:
+          </h3>
+
+          <div
+            class="card flex flex-col-reverse sm:flex-row justify-between items-center p-4 max-w-3xl mx-auto mb-6"
+          >
+            <img class="min-w-0 w-full shadow" src="./assets/images/verspielt.jpg" alt="" />
+            <div class="max-w-lg mb-4 sm:mb-0 sm:ml-8 text-center sm:text-left">
+              <p class="font-bold">Modern / Verspielt</p>
+              <p>
+                Durch abgerundete Ecken, runde Elemente (wie Kreise), runde Schriften (Rounded) und
+                helle, knallige Farben erzielt man einen modernen & verspielten Look.
+              </p>
+            </div>
+          </div>
+          <div
+            class="card flex flex-col-reverse sm:flex-row justify-between items-center p-4 max-w-3xl mx-auto mb-6"
+          >
+            <img class="min-w-0 w-full shadow" src="./assets/images/elegant.jpg" alt="" />
+            <div class="max-w-lg mb-4 sm:mb-0 sm:ml-8 text-center sm:text-left">
+              <p class="font-bold">Seriös / Elegant</p>
+              <p>
+                Durch harte Kanten, Schriften mit Serifen und gedeckte oder besondere Farben (Gold,
+                Silber, ...) kann ein seriöser & eleganter Look erstellt werden.
+              </p>
+            </div>
+          </div>
+          <div
+            class="card flex flex-col-reverse sm:flex-row justify-between items-center p-4 max-w-3xl mx-auto"
+          >
+            <img class="min-w-0 w-full shadow" src="./assets/images/neutral.jpg" alt="" />
+            <div class="max-w-lg mb-4 sm:mb-0 sm:ml-8 text-center sm:text-left">
+              <p class="font-bold">Neutral</p>
+              <p>
+                Gedeckte und neutrale Farben wie Blau und Grau, serifenlose Schriften und leichte
+                Schatten können dabei helfen, neutrale Looks zu erstellen.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-center mb-8" id="animationen-uebergaenge">Animationen & Übergänge</h2>
+
+          <p class="text-center max-w-3xl mx-auto">
+            Helfen bei Orientierung und können Spaß machen (»joy of use«).<br />
+            Aber: immer berücksichtigen, ob sie nicht auf Dauer anstrengend oder nervig sein können!
+          </p>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-center mb-8" style="page-break-before: always;" id="accessibility">
+            Accessibility
+          </h2>
+
+          <div class="flex flex-col sm:flex-row justify-between max-w-3xl mx-auto mb-10">
+            <div class="sm:flex-1 flex flex-col mb-4 sm:mb-0">
+              <p class="mb-4 sm:mr-2">
+                <span class="font-semibold">Form over Function!</span>
+                Accessible Design verbessert die Usability für alle Nutzer*innen, und umgekehrt.
+              </p>
+              <p class="font-bold sm:mr-2">Wichtig:</p>
+              <ul class="list-disc list-inside mb-4 sm:mr-2">
+                <li><span class="-ml-2">Informationen nicht nur per Farbe vermitteln</span></li>
+                <li><span class="-ml-2">Ausreichend Kontrast</span></li>
+                <li><span class="-ml-2">Fokus-Styles</span></li>
+                <li><span class="-ml-2">Alles beschriften</span></li>
+                <li><span class="-ml-2">Tastatur-Navigation berücksichtigen</span></li>
+              </ul>
+              <div class="my-auto flex items-center">
+                <p class="sm:mr-2">Accessiblity kann alle betreffen:</p>
+                <span class="hidden sm:inline-block mt-px flex-grow border"></span>
+              </div>
+            </div>
+            <figure class="card sm:flex-1 p-4">
+              <img
+                class="shadow"
+                src="./assets/images/microsoft-inclusive-design.jpg"
+                alt="Viele Beispiele für Gründe und Situationen, durch die Menschen bei Motorik, Hören, Sehen und Sprechen eingeschränkt sein können – sowohl dauerhaft wie zum Beispiel durch Taubheit, temporär wie bei einer Armverletzung oder situationsbedingt, beispielsweise ein Autofahrer der nur kurz aufs Display schauen kann"
+              />
+            </figure>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between max-w-3xl mx-auto">
+            <div class="flex-1 sm:mr-4">
+              <div class="card flex mb-4 p-2 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/figma.jpg" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">Able for Figma</p>
+                  <a
+                    class="stretched-link"
+                    href="https://www.figma.com/c/plugin/734693888346260052"
+                  >
+                    bit.ly/able-figma
+                  </a>
+                </div>
+              </div>
+              <div class="card flex mb-4 p-2 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/stark_logo.png" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">Stark</p>
+                  <a class="stretched-link" href="https://getstark.co">
+                    getstark.co
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1 sm:ml-4">
+              <div class="card flex mb-4 p-2 overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/wave_logo.svg" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">WAVE</p>
+                  <a class="stretched-link" href="https://wave.webaim.org">wave.webaim.org</a>
+                </div>
+              </div>
+              <div class="flex mb-4 p-2 card overflow-hidden relative">
+                <img class="w-12 h-12 mr-2" src="./assets/images/g_logo.svg" alt="" />
+                <div class="flex flex-col justify-between">
+                  <p class="text-xl font-bold leading-normal">Google Lighthouse</p>
+                  <a class="stretched-link" href="https://web.dev/measure/">web.dev/measure</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mb-10">
+          <h2 class="text-center mb-8" id="responsive-design" style="page-break-before: always;">
+            Responsive Design
+          </h2>
+
+          <div class="flex flex-col sm:flex-row max-w-3xl mx-auto mb-8">
+            <div class="flex-1 mb-8 sm:mb-0 sm:mr-4">
+              <p class="mb-4">
+                Mit Smartphone anfangen (»Mobile First«), dann größere Screens designen, um den
+                zusätzlichen Platz sinnvoll zu nutzen. Übliche Breakpoints:
+              </p>
+              <ul>
+                <li><span class="font-bold">375px Breite:</span> Smartphone</li>
+                <li><span class="font-bold">768px Breite:</span> Tablet</li>
+                <li><span class="font-bold">1024px Breite:</span> Desktop</li>
+                <li><span class="font-bold">1400px Breite:</span> Desktop (groß)</li>
+              </ul>
+            </div>
+
+            <div class="flex-1 sm:ml-4">
+              <p class="mb-4">
+                Üblicherweise arbeitet man mobil mit einem einspaltigen Layout und fügt für größere
+                Screens dann weitere hinzu. Man kann Inhalte...
+              </p>
+              <ul>
+                <li>
+                  <span class="font-bold">...anders anordnen:</span>
+                  mehrere Spalten nutzen, Elemente fixieren
+                </li>
+                <li>
+                  <span class="font-bold">...skalieren:</span>
+                  wichtige Elemente vergrößern, mehr Weißraum
+                </li>
+                <li>
+                  <span class="font-bold">...neu hinzufügen:</span>
+                  weitere hilfreiche Begleit-Elemente einblenden
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card flex flex-col sm:flex-row items-start p-4 mb-8">
+            <img
+              class="w-full min-w-0 shadow mb-4 sm:mb-0 sm:mr-4"
+              style="flex: 0.4994;"
+              src="./assets/images/lieferandu_mobile.jpg"
+              alt="Screenshot einer App um Pizza zu bestellen. Der Header, die Lieferzeit, Filteroptionen, die Auflistung der Pizzen im zweispaltigen Raster und der Bestellbutton sind alle untereinander angeordnet"
+            />
+            <img
+              class="w-full min-w-0 shadow sm:ml-4"
+              style="flex: 1.1918;"
+              src="./assets/images/lieferandu_desktop.jpg"
+              alt="Die gleiche Pizza Bestellung in der Desktopansicht. Bestellschritte, Bestellbutton und eine Übersicht des Warenkorbs sind in einer Spalte auf der linken Seite, rechts davon nimmt nun die Auflistung der Pizzen in einem größeren Raster circa zwei Drittel des Bildschirms ein. Filteroptionen und Lieferzeit befinden sich darüber."
+            />
+          </div>
+
+          <p class="text-center max-w-2xl mx-auto">
+            Einige Funktionen der Designtools (z.B. "Constraints" in Figma) helfen beim Responsive
+            Design, aber generell gibt es beim Interfacedesign eine große Differenz zwischen den
+            Möglichkeiten bei der Umsetzung mit Code und den Möglichkeiten, die Designtools bieten.
+            Lasst euch davon in eurer Kreativität nicht einschränken!
+          </p>
+        </section>
+
+        <section class="max-w-3xl mx-auto text-center my-24 print:my-0">
+          <blockquote class="text-xl font-display mb-8" cite="https://refactoringui.com/book/">
+            »By continually studying the work that inspires you with a careful eye, you’ll be
+            picking up design tricks for years to come.«
+            <footer>
+              –
+              <cite class="text-base">
+                <a href="https://refactoringui.com/book/">Steve Schoger & Adam Wathan</a>
+              </cite>
+            </footer>
+          </blockquote>
+
+          <div
+            class="flex justify-between md:inline-flex bg-accent rounded-lg shadow py-2 px-6 print:hidden"
+          >
+            <a
+              class="font-bold flex items-center mr-2 hocus:text-primary"
+              href="https://dmp.hs-bremerhaven.de/www/modern-ui/Handout.pdf"
+            >
+              <!-- prettier-ignore -->
+              <svg aria-hidden="true" class="inline fill-current w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g><path d="M81.6 6h-33v29a1 1 0 01-1 1h-29v18h63zM18.6 88.6h63v7.5h-63z"/><path d="M46.6 7.4L33.3 20.7 20 34.1h26.6V7.4zM85.6 56H14.4a3.4 3.4 0 00-3.4 3.4v23.8a3.4 3.4 0 003.4 3.4h71.2a3.4 3.4 0 003.4-3.4V59.4a3.4 3.4 0 00-3.4-3.4zM35.5 74h-2.9v6a1 1 0 01-1 1h-2.2a1 1 0 01-1-1V62.6a1 1 0 011-1h6c4.4 0 6.8 2.2 6.8 6.2S39.8 74 35.4 74zm14.8 7h-5.8a1 1 0 01-1-1V62.6a1 1 0 011-1h5.8c6.2 0 9.7 3.5 9.7 9.7S56.6 81 50.3 81zm24-16.4a1 1 0 01-1 1H66v4h6.2a1 1 0 011 1v2a1 1 0 01-1 1H66V80a1 1 0 01-1 1h-2.2a1 1 0 01-1-1V62.6a1 1 0 011-1h10.5a1 1 0 011 1z"/><path d="M55.7 71.3c0-2-.5-3.5-1.4-4.4a5.4 5.4 0 00-4-1.3h-2.5V77h2.5c3.8 0 5.4-1.8 5.4-5.8zM37.9 67.8c0-1.6-.7-2.2-2.4-2.2h-2.9V70h2.9c2 0 2.4-.9 2.4-2.2z"/></g></svg>
+              <span>PDF<span class="hidden xs:inline whitespace-pre"> anzeigen</span></span>
+            </a>
+
+            <button
+              class="font-bold flex items-center ml-2 hocus:underline hocus:text-primary focus:outline-none"
+              onclick="window.print()"
+            >
+              <!-- prettier-ignore -->
+              <svg aria-hidden="true" class="inline fill-current w-5 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M37.9 72.4h24.2c1.9 0 3.4-1.5 3.4-3.4s-1.5-3.4-3.4-3.4H37.9c-1.9 0-3.4 1.5-3.4 3.4s1.5 3.4 3.4 3.4zM65.5 78.1h-31a3.4 3.4 0 00-3.4 3.4c0 1.9 1.5 3.4 3.4 3.4h31.1c1.9 0 3.4-1.5 3.4-3.4a3.6 3.6 0 00-3.5-3.4z"/><path d="M87.8 28H76.1V16.5c0-.9-.4-1.7-1-2.4L64.5 3.5c-.6-.6-1.5-1-2.4-1H27.3a3.4 3.4 0 00-3.4 3.4V28H12.2a8.6 8.6 0 00-8.6 8.6v28.6c0 4.8 3.9 8.6 8.6 8.6h6.2l-6 19.3c-.3 1-.1 2.2.5 3 .6.9 1.7 1.4 2.7 1.4h68.8c1.1 0 2.1-.5 2.7-1.4s.8-2 .5-3l-6-19.3h6.2c4.8 0 8.6-3.9 8.6-8.6V36.6a8.5 8.5 0 00-8.6-8.6zM30.7 9.3h27.4V17c0 1.9 1.5 3.4 3.4 3.4h7.8V28H30.7V9.3zM14.4 43c0-1.9 1.5-3.4 3.4-3.4h6.6c1.8 0 3.4 1.5 3.4 3.4s-1.6 3.4-3.4 3.4h-6.6a3.4 3.4 0 01-3.4-3.4zm5.8 47.7l9.6-30.9h40.3l9.6 30.9H20.2z"/></svg>
+              Drucken
+            </button>
+          </div>
+        </section>
+
+        <section
+          class="max-w-3xl mx-auto opacity-50 hover:opacity-100 focus-within:opacity-100 print:opacity-100"
+        >
+          <h2 class="text-center mb-8" id="quellen">Quellen</h2>
+
+          <h3 class="text-center mb-4">Seite 1 (PDF)</h3>
+          <ul class="list-disc break-words mb-4">
+            <li>
+              Zitat von Hackernoon
+              <a href="https://hackernoon.com/what-is-ui-ux-design-1f01e9dbbf02"
+                >https://hackernoon.com/what-is-ui-ux-design-1f01e9dbbf02</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Bild »Link« von Nintendo vgl.
+              <a
+                href="https://www.nintendo.de/Spiele/Nintendo-Switch/The-Legend-of-Zelda-Link-s-Awakening-1514327.html#"
+                >https://www.nintendo.de/Spiele/Nintendo-Switch/The-Legend-of-Zelda-Link-s-Awakening-1514327.html#</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Adobe XD« von Adobe
+              <a href="https://www.subtraction.com/2018/05/15/adobe-xd-ten-million-and-zero/"
+                >https://www.subtraction.com/2018/05/15/adobe-xd-ten-million-and-zero/</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Figma« von Figma
+              <a href="https://www.indiemakers.tools/product/figma/"
+                >https://www.indiemakers.tools/product/figma/</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Sketch« von Sketch
+              <a href="https://www.sketch.com/press/">https://www.sketch.com/press/</a> Stand:
+              16.01.2020
+            </li>
+            <li>
+              Logo »Pexels« von Pexels
+              <a href="https://www.trilobit.de/trilobits/contao-erweiterung-pexels.html"
+                >https://www.trilobit.de/trilobits/contao-erweiterung-pexels.html</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Noun Project« von The Noun Project
+              <a href="https://thenounproject.com">https://thenounproject.com</a> Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »unDraw« von unDraw
+              <a href="https://uxpro.cc/toolbox/undraw/">https://uxpro.cc/toolbox/undraw/</a> Stand:
+              16.01.2020
+            </li>
+          </ul>
+
+          <h3 class="text-center mb-4">Seite 4 (PDF)</h3>
+          <ul class="list-disc break-words mb-4">
+            <li>
+              Bild »Accessibility« von Microsoft
+              <a href="https://stephanielummis.com/accessible-websites/"
+                >https://stephanielummis.com/accessible-websites/</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Figma« von Figma
+              <a href="https://www.indiemakers.tools/product/figma/"
+                >https://www.indiemakers.tools/product/figma/</a
+              >
+              Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Stark« von Stark
+              <a href="https://www.getstark.co">https://www.getstark.co</a> Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Wave« von Wave
+              <a href="https://wave.webaim.org">https://wave.webaim.org</a> Stand: 16.01.2020
+            </li>
+            <li>
+              Logo »Google« von Google
+              <a href="https://de.wikipedia.org/wiki/Datei:Google_%22G%22_Logo.svg"
+                >https://de.wikipedia.org/wiki/Datei:Google_%22G%22_Logo.svg</a
+              >
+              Stand: 16.01.2020
+            </li>
+          </ul>
+
+          <h3 class="text-center mb-4">Seite 5 (PDF)</h3>
+          <ul class="list-disc">
+            <li>
+              Zitat von Adam Wathan und Steve Schoger aus Refactoring UI von Adam Wathan & Steve
+              Schoger Seite 218 Stand: 16.01.2020
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <footer
+      class="container pb-4 flex items-center text-white max-w-4xl xl:max-w-6xl mx-auto mt-auto font-normal print:hidden"
+    >
+      <a
+        class="mr-auto mb-0 outline-none border-t-2 border-b-2 border-transparent focus:border-accent"
+        href="https://dmp-bremerhaven.de"
+        rel="noopener noreferer"
+        aria-label="DMP Website"
+      >
+        <svg
+          width="80"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 841.89 595.28"
+          preserveAspectRatio="xMidYMid meet"
+          class="fill-current"
+          aria-hidden="true"
+        >
+          <path d="M354.43,383.93h-39.6V215.64h39.6V383.93Z" />
+          <rect x="401.94" y="215.64" width="39.6" height="168.29" />
+          <rect x="489.06" y="215.78" width="39.6" height="168.29" />
+          <path
+            d="M227.71,81V235.13c-15.37-13.28-35.34-23.24-57.24-23.24a87.7,87.7,0,0,0,0,175.39c21.9,0,42.08-10.08,57.45-23.36l-.21,20h39.6V81ZM170.47,351.55a52,52,0,1,1,0-103.93c34.32,0,55.82,23.27,55.82,52S204.54,351.55,170.47,351.55Z"
+          />
+          <path
+            d="M615.77,514.27V364.39c15.37,13.27,35.35,23.23,57.25,23.23,48.43,0,86.09-39.26,86.09-87.69S721.45,212.24,673,212.24c-21.9,0-42.08,10.08-57.45,23.35l.2-20H576.18V514.27ZM673,248c28.7,0,50.62,20.27,50.62,52,0,28.7-21.92,52-50.62,52-32.72,0-56-23.26-56-52S638.64,248,673,248Z"
+          />
+        </svg>
+      </a>
+
+      <a href="./impressum" class="mr-2 hover:underline outline-none focus:underline">
+        Impressum
+      </a>
+      <span class="pb-1">•</span>
+      <a href="./datenschutz" class="ml-2 hover:underline outline-none focus:underline">
+        Datenschutz
+      </a>
+    </footer>
+  </body>
+</html>

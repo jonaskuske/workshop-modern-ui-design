@@ -1,0 +1,2 @@
+# don't prettify minified assets
+assets/**/*.min.*

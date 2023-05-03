@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full scrollbar-accent smoothscroll">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Action! | Modern UI Design</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#a11cf2" />
+    <link rel="canonical" href="https://modern-ui.design/action" />
+
+    <!-- [if IE]
+      <link rel="shortcut icon" href="./assets/icons/favicon.ico">
+    <![endif]-->
+
+    <meta name="msapplication-TileColor" content="#a11cf2" />
+    <meta name="msapplication-config" content="./assets/icons/browserconfig.xml" />
+    <meta name="theme-color" content="#a11cf2" />
+
+    <link rel="stylesheet" href="./assets/styles.min.css" />
+    <script type="module">
+      import { detectScrollBar, polyfill } from './assets/js/utils.js'
+      detectScrollBar()
+      polyfill()
+    </script>
+  </head>
+
+  <body class="flex flex-col items-start font-light bg-primary text-white min-h-full">
+    <div
+      class="splash-header-container fixed top-0 left-0 w-full h-16 z-20 flex bg-primary lg:bg-gradient text-white shadow-xl"
+    >
+      <header
+        class="header container visible flex items-center w-full max-w-4xl xl:max-w-6xl mx-auto"
+      >
+        <a
+          href="./#start"
+          class="mr-auto outline-none p-1 border-t-2 border-b-2 border-transparent focus:border-white"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 547.95 350.29"
+            aria-labelledby="logoTitle"
+            class="w-12 h-12 lg:w-16 text-white"
+          >
+            <title id="logoTitle">Modern UI Design Logo</title>
+            <defs>
+              <style>
+                .line {
+                  fill: none;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 39.69px;
+                }
+              </style>
+            </defs>
+            <path
+              class="line stroke-current"
+              d="M19.84,283.07l0-262.4,120.5,176.26L263,19.84l0,211s0,99.61,96.92,99.61c98,0,98-99.61,98-99.61V60"
+            />
+            <path
+              class="fill-current"
+              d="M506.71,82.37q-5.41-4.53-5.4-14.46V61q0-10.37,5.83-14.68T525.06,42q12.09,0,17.49,4.54T548,61v6.92q0,10.35-5.61,14.68t-17.71,4.32Q512.11,86.91,506.71,82.37Z"
+            />
+          </svg>
+        </a>
+
+        <a href="./#start" class="font-display font-medium ml-4">Start</a>
+        <a href="./#termine" class="font-display font-medium ml-4">Termine</a>
+        <a href="./#about" class="font-display font-medium ml-4">About</a>
+        <div class="btn-signup max-w-0 lg:max-w-full">
+          <a
+            href="./handout"
+            class="ml-4 button text-white bg-black-30 focus:bg-white-30 outline-none focus:text-black-70"
+          >
+            Handout
+          </a>
+        </div>
+      </header>
+    </div>
+
+    <div class="container mx-auto pt-24 lg:p-32 mb-16 lg:mb-20 leading-relaxed">
+      <aside class="hidden lg:block fixed top-0 left-0 h-full">
+        <nav class="mt-64 ml-8">
+          <ul>
+            <li class="mb-2">
+              <a
+                href="#info"
+                class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+              >
+                Info
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="#kursinhalte"
+                class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+              >
+                Kursinhalte
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="#materialien"
+                class="opacity-50 hover:opacity-100 focus:opacity-100 focus:no-underline hover:no-underline"
+              >
+                Materialien
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <main>
+        <h1 class="mb-12"><span class="hidden lg:inline">4 – </span>Action</h1>
+        <div class="lg:mx-10">
+          <h2 class="mb-2" id="info">Info</h2>
+          <p class="mb-4 max-w-3xl">
+            Nachdem in den ersten drei Workshops viel gelernt wurde, soll es im vierten Workshop
+            darum gehen, das Gelernte anzuwenden und praktisch zu vertiefen. Indem zusammen und
+            individuell an Projekten gearbeitet wird, könnt ihr prüfen, ob das, was wir erzählt
+            haben, auch Sinn ergibt. Zusätzlich wird es auch noch einen kleinen Exkurs in das
+            Trendthema "Design-Systems" geben. Und zu guter Letzt wollen wir zusammen dieses
+            Experiment mit ein bisschen Feedback abschließen – und mit Snacks für Alle! 🍿
+          </p>
+
+          <h2 class="mb-2" id="kursinhalte">Kursinhalte</h2>
+          <ul class="mb-4 list-disc list-inside max-w-3xl">
+            <li>Arbeit an praktischen Projekten (zusammen und individuell)</li>
+            <li>Exkurs: Design-Systems</li>
+            <li>Zeit für Fragen und dumme Kommentare</li>
+            <li>Feedback & Snacks</li>
+          </ul>
+
+          <h2 class="mb-2" id="materialien">Materialien</h2>
+          <div class="mb-4 max-w-3xl">
+            <ul class="mb-4">
+              <li
+                class="bg-white mb-2 p-4 px-6 rounded-lg flex justify-between text-black items-center"
+              >
+                Übung 01: Design Sprint
+                <a
+                  href="./demos/action/Uebung_01.zip"
+                  download
+                  class="button text-white bg-accent hover:bg-accent-50 focus:bg-accent-50 ml-2"
+                >
+                  <span class="hidden sm:inline">Download</span>
+                  <span class="sm:hidden" aria-label="Download">▼</span>
+                </a>
+              </li>
+              <li
+                class="bg-white mb-2 p-4 px-6 rounded-lg flex justify-between text-black items-center"
+              >
+                Übung 02a: Action.
+                <a
+                  href="./demos/action/Uebung_02.zip"
+                  download
+                  class="button text-white bg-accent hover:bg-accent-50 focus:bg-accent-50 ml-2"
+                >
+                  <span class="hidden sm:inline">Download</span>
+                  <span class="sm:hidden" aria-label="Download">▼</span>
+                </a>
+              </li>
+              <li
+                class="bg-white mb-2 p-4 px-6 rounded-lg flex justify-between text-black items-center"
+              >
+                Übung 02b: Design with Code.
+                <a
+                  href="https://github.com/jonaskuske/workshop-modern-ui-design/tree/master/demos/action/design-with-code"
+                  class="button text-white bg-accent hover:bg-accent-50 focus:bg-accent-50 ml-2"
+                >
+                  <span class="hidden sm:inline">Download</span>
+                  <span class="sm:hidden" aria-label="Download">▼</span>
+                </a>
+              </li>
+            </ul>
+            <h3 class="mb-2">Mehr Stuff</h3>
+            <ul class="list-disc list-inside">
+              <li>
+                <a
+                  href="https://dmp.hs-bremerhaven.de/www/modern-ui/Workshop 4.pdf"
+                  class="icon-link"
+                >
+                  Präsentationsfolien
+                </a>
+              </li>
+              <li>
+                <a href="https://forms.gle/iabNB5SGm6ZpySA18" class="icon-link">Feedback</a>
+              </li>
+              <li>
+                <a
+                  href="https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969"
+                  class="icon-link"
+                >
+                  Everything you need to know about Design Systems
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.invisionapp.com/inside-design/guide-to-design-systems/"
+                  class="icon-link"
+                >
+                  A comprehensive guide to Design Systems (Invision)
+                </a>
+              </li>
+              <li>
+                <a href="https://designsystemsrepo.com/" class="icon-link">
+                  Design Systems Repo: a collection of Design System examples, articles, tools &
+                  talks
+                </a>
+              </li>
+              <li>
+                <a href="http://atomicdesign.bradfrost.com/table-of-contents/" class="icon-link">
+                  Atomic Design (Buch von Brad Frost)
+                </a>
+              </li>
+              <li>
+                <a href="https://bradfrost.com/blog/" class="icon-link">
+                  Brad Frost – Blog
+                </a>
+              </li>
+              <li>
+                <a href="https://mailchimp.com/design/" class="icon-link">Mailchimp – Design</a>
+              </li>
+              <li>
+                <a href="https://ux.mailchimp.com/patterns/color" class="icon-link">
+                  Mailchimp – Component Library
+                </a>
+              </li>
+              <li>
+                <a href="https://styleguide.mailchimp.com/" class="icon-link">
+                  Mailchimp – Content Styleguide
+                </a>
+              </li>
+              <li>
+                <a href="https://storybook.js.org/" class="icon-link">
+                  Storybook – UI component explorer for design systems
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/seek-oss/playroom" class="icon-link">
+                  Playroom – simultaneously design across themes & screen sizes, powered by your
+                  component library
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer
+      class="container pb-4 flex items-center text-white max-w-4xl xl:max-w-6xl mx-auto mt-auto font-normal"
+    >
+      <a
+        class="mr-auto mb-0 outline-none border-t-2 border-b-2 border-transparent focus:border-accent"
+        href="https://dmp-bremerhaven.de"
+        rel="noopener noreferer"
+        aria-label="DMP Website"
+      >
+        <svg
+          width="80"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 841.89 595.28"
+          preserveAspectRatio="xMidYMid meet"
+          class="fill-current"
+          aria-hidden="true"
+        >
+          <path d="M354.43,383.93h-39.6V215.64h39.6V383.93Z" />
+          <rect x="401.94" y="215.64" width="39.6" height="168.29" />
+          <rect x="489.06" y="215.78" width="39.6" height="168.29" />
+          <path
+            d="M227.71,81V235.13c-15.37-13.28-35.34-23.24-57.24-23.24a87.7,87.7,0,0,0,0,175.39c21.9,0,42.08-10.08,57.45-23.36l-.21,20h39.6V81ZM170.47,351.55a52,52,0,1,1,0-103.93c34.32,0,55.82,23.27,55.82,52S204.54,351.55,170.47,351.55Z"
+          />
+          <path
+            d="M615.77,514.27V364.39c15.37,13.27,35.35,23.23,57.25,23.23,48.43,0,86.09-39.26,86.09-87.69S721.45,212.24,673,212.24c-21.9,0-42.08,10.08-57.45,23.35l.2-20H576.18V514.27ZM673,248c28.7,0,50.62,20.27,50.62,52,0,28.7-21.92,52-50.62,52-32.72,0-56-23.26-56-52S638.64,248,673,248Z"
+          />
+        </svg>
+      </a>
+
+      <a href="./impressum" class="mr-2 hover:underline outline-none focus:underline">
+        Impressum
+      </a>
+      <span class="pb-1">•</span>
+      <a href="./datenschutz" class="ml-2 hover:underline outline-none focus:underline">
+        Datenschutz
+      </a>
+    </footer>
+  </body>
+</html>

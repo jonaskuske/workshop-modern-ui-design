@@ -1,0 +1,49 @@
+@import './fonts.css';
+@import './base.css';
+@import './components.css';
+@import './utilities.css';
+
+.splash-header-container {
+  transition: height 350ms ease;
+}
+.header {
+  transition: visibility 0ms 365ms, opacity 150ms 365ms ease-in;
+}
+.splash {
+  transition: opacity 150ms ease-out, visibility 0ms 150ms;
+}
+.splash-header-container.h-full .header {
+  @apply invisible opacity-0;
+}
+.splash-header-container.h-full .splash {
+  @apply opacity-100 visible;
+}
+
+.show-dot .dot {
+  @apply bounce-in;
+  transform: scale(0.7);
+}
+
+.splash h1 {
+  transition: opacity 110ms ease-in;
+}
+.splash--visible h1 {
+  @apply opacity-100;
+}
+
+svg.leader-line {
+  @apply hidden;
+  @apply overflow-hidden !important;
+}
+@screen lg {
+  svg.leader-line {
+    @apply block;
+  }
+}
+
+@media screen {
+  h2[id] {
+    margin-top: -4.5rem;
+    padding-top: 4.5rem;
+  }
+}

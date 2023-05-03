@@ -1,0 +1,80 @@
+@tailwind components;
+
+/* Button */
+.button {
+  @apply inline-block rounded-lg border-none text-lg uppercase text-center font-display font-medium px-4 py-2 no-underline;
+}
+.button:hover {
+  @apply no-underline;
+}
+.button:focus {
+  @apply shadow-outline no-underline;
+}
+
+.card {
+  @apply bg-white text-primary rounded-lg;
+}
+
+@media print {
+  .card {
+    border-color: currentColor;
+    @apply bg-transparent border-2;
+  }
+}
+
+/* Input w/ floating label */
+.field {
+  @apply flex flex-col-reverse;
+}
+label,
+input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+  @apply font-body font-light;
+}
+input {
+  -webkit-appearance: none;
+  @apply border-none rounded-lg px-3 py-2 cursor-text;
+}
+
+input:focus {
+  @apply outline-none;
+}
+label {
+  font-size: calc(1rem / 1.5);
+  @apply pl-2;
+}
+
+input:placeholder-shown + label {
+  max-width: 66.66%;
+  transform-origin: left bottom;
+  transform: translate(0, 2.25rem) scale(1.5);
+  @apply cursor-text opacity-75 truncate;
+}
+
+input::placeholder {
+  transition: inherit;
+  color: inherit;
+  @apply opacity-0;
+}
+input:focus::placeholder {
+  @apply opacity-100;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  @apply opacity-100 cursor-pointer;
+}
+
+.btn-signup {
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: max-width 250ms ease, opacity 300ms ease, visibility 0ms 310ms;
+}
+.btn-signup.lg\:max-w-full {
+  opacity: 1;
+  visibility: visible;
+  transition: max-width 300ms ease-in, opacity 250ms 50ms ease-in;
+}

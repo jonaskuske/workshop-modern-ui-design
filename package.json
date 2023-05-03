@@ -1,0 +1,52 @@
+{
+  "name": "workshop-modern-ui-design",
+  "version": "1.2.0",
+  "description": "The repo for the design workshop at HS Bremerhaven",
+  "main": "index.html",
+  "scripts": {
+    "start": "postcss styles/index.css -o assets/styles.min.css -w",
+    "build": "cross-env NODE_ENV=production postcss styles/index.css -o assets/styles.min.css"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged && npm run build && git add assets/styles.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonaskuske/workshop-modern-ui-design.git"
+  },
+  "author": "Jonas Kuske",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/jonaskuske/workshop-modern-ui-design/issues"
+  },
+  "homepage": "https://github.com/jonaskuske/workshop-modern-ui-design#readme",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@prettier/plugin-php": "^0.14.0",
+    "autoprefixer": "^9.7.5",
+    "cross-env": "^7.0.2",
+    "cssnano": "^4.1.10",
+    "lint-staged": "^10.1.1",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "prettier": "^2.0.2",
+    "yorkie": "^2.0.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.2.0",
+    "tailwindcss-interaction-variants": "^3.1.1"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,html}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100,
+    "tabWidth": 2,
+    "phpVersion": "7.4"
+  }
+}

@@ -1,0 +1,112 @@
+@page {
+  size: A4;
+  margin: 1cm;
+}
+
+/* Hack for Safari as it doesn't respect `size: A4` */
+@media not all and (min-resolution: 0.001dpcm) {
+  @media {
+    html,
+    body {
+      width: 210mm;
+      height: 297mm;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  page-break-after: avoid;
+}
+
+table,
+figure,
+ul,
+ol,
+.card {
+  page-break-inside: avoid;
+}
+
+/* Utility classes for print styles */
+.print\:block {
+  display: block !important;
+}
+.print\:hidden {
+  display: none !important;
+}
+.print\:max-w-lg {
+  max-width: 32rem !important;
+}
+.print\:opacity-100 {
+  opacity: 1 !important;
+}
+.print\:pt-0 {
+  padding-top: 0 !important;
+}
+.print\:mt-0 {
+  margin-top: 0 !important;
+}
+.print\:mb-4 {
+  margin-bottom: 1rem !important;
+}
+.print\:mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+.print\:mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.print\:my-0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Override styles to make them print friendly */
+.bg-primary {
+  background-color: transparent !important;
+}
+.text-white {
+  color: #000 !important;
+}
+
+/* Simulate sm breakpoint for printing - hacky but works */
+.sm\:flex-row {
+  flex-direction: row;
+}
+.sm\:mb-0 {
+  margin-bottom: 0;
+}
+.sm\:hidden {
+  display: none;
+}
+.sm\:inline {
+  display: inline;
+}
+.sm\:mr-2 {
+  margin-right: 0.5rem;
+}
+.sm\:ml-2 {
+  margin-left: 0.5rem;
+}
+.sm\:text-right {
+  text-align: right;
+}
+.sm\:mr-4 {
+  margin-right: 1rem;
+}
+.sm\:ml-8 {
+  margin-left: 2rem;
+}
+.sm\:text-left {
+  text-align: left;
+}
+.sm\:inline-block {
+  display: inline-block;
+}
+.sm\:ml-4 {
+  margin-left: 1rem;
+}
